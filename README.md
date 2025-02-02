@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - WepAppProject
+name: Build and deploy JAR app to Azure Web App - azureprojectcicd
 
 on:
   push:
@@ -50,7 +50,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'WepAppProject'
+          app-name: 'azureprojectcicd'
           slot-name: 'Production'
           package: '*.jar'
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_d77f88d260d344e5952f28e8e8c06647 }}
